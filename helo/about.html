@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About CitizenLaw | Government of India</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ===== Top Header ===== -->
+  <header class="top-header">
+    <div class="top-container">
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Ashoka_Chakra.svg" alt="Emblem" class="emblem" />
+        <div class="govt-text">
+          <h4>Government of India</h4>
+          <p>Ministry of Law and Justice</p>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <button>🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="acts.html">Acts & Rules</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Parliament_House%2C_New_Delhi.jpg') center/cover;">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>About CitizenLaw</h1>
+        <p>Bringing justice and awareness closer to every Indian citizen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="section">
+    <h2>Overview</h2>
+    <p>
+      CitizenLaw is a digital public initiative under the Ministry of Law and Justice, Government of India, dedicated to enhancing legal literacy across the nation. 
+      It serves as a bridge between citizens and legal institutions, simplifying legal information and promoting awareness about constitutional rights and duties.
+    </p>
+
+    <p>
+      The platform provides information about key laws, rights, duties, government legal aid schemes, and online services. It aims to empower people with knowledge so that justice is accessible, affordable, and transparent for all.
+    </p>
+  </section>
+
+  <!-- ===== Objectives Section ===== -->
+  <section class="section" style="background: var(--light-bg);">
+    <h2>Objectives</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>⚖️ Legal Awareness</h3>
+        <p>Educate citizens about their constitutional rights, duties, and access to justice.</p>
+      </div>
+      <div class="card">
+        <h3>📚 Simplified Legal Information</h3>
+        <p>Present legal material in easy-to-understand formats using technology and design.</p>
+      </div>
+      <div class="card">
+        <h3>🧑‍⚖️ Accessibility</h3>
+        <p>Ensure that citizens in rural and urban areas can access free legal aid easily.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Collaboration</h3>
+        <p>Work alongside State Legal Services Authorities, NGOs, and academic institutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Vision Section ===== -->
+  <section class="section">
+    <h2>Vision & Mission</h2>
+    <p>
+      The vision of CitizenLaw is to foster a legally informed society where every citizen understands their rights, obligations, and legal remedies. 
+      Through a blend of technology and governance, it strives to build a transparent and responsive justice ecosystem.
+    </p>
+    <p>
+      The mission is to integrate digital platforms with legal literacy, ensuring that “Justice for All” is not just a constitutional promise but a lived reality.
+    </p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="acts.html">Legal Acts</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <h3>Contact</h3>
+        <p>Ministry of Law and Justice, Government of India</p>
+        <p>Toll-Free: <strong>1800-123-4567</strong></p>
+        <p>Email: info@citizenlaw.gov.in</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Government of India | CitizenLaw Portal</p>
+  </footer>
+
+  <!-- ===== Chatbot Placeholder ===== -->
+  <div id="chatbot">
+    <button id="chat-toggle">💬</button>
+    <div id="chat-box">
+      <div class="chat-header">
+        <h4>Ask CitizenLaw AI</h4>
+      </div>
+      <div class="chat-body" id="chat-body">
+        <p class="bot-msg">Hi! This is the CitizenLaw Assistant. Ask about rights, duties, or services.</p>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
