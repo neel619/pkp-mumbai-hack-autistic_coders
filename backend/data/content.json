@@ -1,0 +1,204 @@
+{
+  "cards": [
+    {
+      "id": "c1",
+      "category": "Police",
+      "title": "How to file an FIR",
+      "summary": "If you've been the victim of a cognizable offense, file an FIR at the nearest police station.",
+      "steps": [
+        "Collect incident details & ID proofs.",
+        "Go to the nearest police station.",
+        "Describe the incident clearly and request FIR registration.",
+        "Take a copy of the FIR and note the FIR number."
+      ],
+      "links": ["https://example.gov/filing-fir"],
+      "languages": {
+        "mr": {
+          "title": "FIR कशी फाइल करावी",
+          "summary": "जर तुम्ही गुन्ह्याचा बळी झाला असाल तर नजीकच्या पोलिस ठाण्यात FIR नोंदवा.",
+          "steps": [
+            "घटनेचे तपशील आणि ओळखपत्र सोबत ठेवा.",
+            "नजीकच्या पोलिस ठाण्यात जा.",
+            "घटना स्पष्टपणे सांगा आणि FIR नोंदवण्यास सांगा.",
+            "FIR ची प्रत घ्या आणि नंबर नोंद करा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c2",
+      "category": "Consumer",
+      "title": "How to raise a consumer complaint",
+      "summary": "Steps to file a consumer complaint for defective goods or services.",
+      "steps": [
+        "Collect bill, warranty and communication records.",
+        "Contact seller/service provider for resolution.",
+        "If unresolved, file a complaint on the Consumer Forum/portal.",
+        "Keep copies of all documents and complaint reference."
+      ],
+      "links": ["https://consumerhelpline.example.gov"],
+      "languages": {
+        "mr": {
+          "title": "ग्राहक तक्रार कशी करावी",
+          "summary": "खराब वस्तू किंवा सेवा बाबत ग्राहक तक्रार नोंदविण्याची पद्धत.",
+          "steps": [
+            "बिल, वॉरंटी व सर्व संवादाची नोंद ठेवा.",
+            "विक्रेता/सेवा पुरवठादाराशी समजुतीचा प्रयत्न करा.",
+            "न निराकरण झाल्यास ग्राहक मंचावर तक्रार नोंदवा.",
+            "सर्व कागदपत्रे आणि संदर्भ जतन करा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c3",
+      "category": "Tenancy",
+      "title": "Tenant rights: Security deposit",
+      "summary": "How to claim your security deposit back from a landlord.",
+      "steps": [
+        "Check tenancy agreement for deposit terms.",
+        "Request inspection and itemized deductions in writing.",
+        "If landlord withholds unfairly, send a legal notice or approach local rent authority."
+      ],
+      "links": [],
+      "languages": {
+        "mr": {
+          "title": "किरायेदाराचे हक्क: सुरक्षा ठेव",
+          "summary": "भाडेकरुने सुरक्षा ठेव कशी परत मिळवावी याची माहिती.",
+          "steps": [
+            "करारनाम्यात ठेव संबंधी अटी पहा.",
+            "दुरुस्तीची तपासणी आणि कटौतीची यादी लेखी स्वरूपात मागवा.",
+            "अनवीठे रोखल्यास कायदेशीर नोटीस द्या किंवा स्थानिक भाडे प्राधिकरणाकडे जा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c4",
+      "category": "Labour",
+      "title": "If employer doesn't pay salary",
+      "summary": "Steps to take when an employer withholds salary.",
+      "steps": [
+        "Keep salary slips and communication records.",
+        "Talk to HR/manager and ask for written explanation.",
+        "File complaint with labour inspector or appropriate labour court if unresolved."
+      ],
+      "links": [],
+      "languages": {
+        "mr": {
+          "title": "नोकरीपचे वेतन न मिळाल्यास काय करावे",
+          "summary": "नियोक्ता वेतन ठेवत असल्यास घेण्यासंबंधी पावले.",
+          "steps": [
+            "वेतन स्लिप आणि संवादाची नोंद ठेवा.",
+            "HR/व्यवस्थापकांशी बोला आणि लेखी स्पष्टीकरण मागा.",
+            "निराकरण न झाल्यास मजुरी निरीक्षकाकडे तक्रार नोंदवा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c5",
+      "category": "Women & Child",
+      "title": "Domestic violence support (immediate help)",
+      "summary": "Immediate steps and helplines if you face domestic violence.",
+      "steps": [
+        "Ensure your immediate safety — go to a safe place if possible.",
+        "Call local police or helpline numbers.",
+        "Contact women's helplines or NGOs for shelter and legal aid."
+      ],
+      "links": ["https://womenhelpline.example.gov"],
+      "languages": {
+        "mr": {
+          "title": "घरेलू हिंसासाठी तात्काळ मदत",
+          "summary": "घरेलू हिंसा असल्यास घेण्यासारखी तातडीची पावले व हेल्पलाईन्स.",
+          "steps": [
+            "तुमची तातडीची सुरक्षा सुनिश्चित करा - शक्य असल्यास सुरक्षित ठिकाणी जा.",
+            "स्थानीय पोलिस किंवा हेल्पलाइनला कॉल करा.",
+            "निवारा आणि कायदेशीर मदतीसाठी NGOs किंवा महिला हेल्पलाइनशी संपर्क करा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c6",
+      "category": "Traffic",
+      "title": "Paying a traffic fine",
+      "summary": "How to check and pay traffic fines online or in person.",
+      "steps": [
+        "Check traffic fine using vehicle RC number on state portal.",
+        "Pay online or visit the local traffic office with challan details.",
+        "Keep receipt as proof of payment."
+      ],
+      "links": [],
+      "languages": {
+        "mr": {
+          "title": "वाहतूक दंड कसा द्यावा",
+          "summary": "वाहतूक दंड ऑनलाइन किंवा प्रत्यक्ष कसा तपासावा व द्यावा.",
+          "steps": [
+            "वाहन RC नंबरवरून राज्य पोर्टलवर दंड तपासा.",
+            "ऑनलाइन द्या किंवा स्थानिक ट्रॅफिक कार्यालयात जा.",
+            "पेमेंटनंतर पावती जतन करा."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c7",
+      "category": "Health",
+      "title": "Patient rights in hospitals",
+      "summary": "Basic rights patients should know while getting treatment in a hospital.",
+      "steps": [
+        "Right to informed consent and treatment details.",
+        "Right to access medical records and receive bills.",
+        "If denied, approach hospital grievance cell or consumer forum."
+      ],
+      "links": [],
+      "languages": {
+        "mr": {
+          "title": "रुग्णांचे हक्क",
+          "summary": "रुग्णांनी रुग्णालयात उपचार घेताना माहित असणे आवश्यक असलेले हक्क.",
+          "steps": [
+            "सुस्पष्ट माहिती आणि संमतीचा हक्क.",
+            "वैद्यकीय नोंदी आणि बिले मिळवण्याचा हक्क.",
+            "नाकारल्यास रुग्णालयाच्या तक्रार सेल किंवा ग्राहक मंचाकडे जा."
+          ]
+        }
+      }
+    }
+  ],
+  "flows": [
+    {
+      "id": "f1",
+      "cardId": "c1",
+      "title": "FIR filing flow",
+      "steps": [
+        "Gather evidence and IDs",
+        "Visit local police station",
+        "Explain incident and request FIR",
+        "Get FIR copy and note down number"
+      ]
+    },
+    {
+      "id": "f2",
+      "cardId": "c2",
+      "title": "Consumer complaint flow",
+      "steps": [
+        "Collect bill/warranty and proofs",
+        "Contact seller and ask for remedy",
+        "If not solved, file online complaint with documents",
+        "Pursue consumer forum if escalation needed"
+      ]
+    },
+    {
+      "id": "f3",
+      "cardId": "c4",
+      "title": "Unpaid salary flow",
+      "steps": [
+        "Collect salary slips and communications",
+        "Speak to HR and request written resolution",
+        "Send legal notice or approach labour inspector",
+        "File case in appropriate labour court if needed"
+      ]
+    }
+  ]
+}

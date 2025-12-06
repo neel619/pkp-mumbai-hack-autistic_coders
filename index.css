@@ -1,0 +1,33 @@
+.nav {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#input_data{
+    border: none;
+    width: 600px;
+    height: 30px;
+    background: transparent;
+}
+
+.navtab{
+    display: flex;
+    align-items: center;
+}
+
+#searchbar{
+    background-color: #F1F4FF;
+    padding: 8px;
+    border-radius: 8px; 
+}
+
+#login{
+    font-family: sans-serif;
+    align-items: center;
+}
+
+#cart{
+    font-family: sans-serif;
+    align-items: center;
+}
