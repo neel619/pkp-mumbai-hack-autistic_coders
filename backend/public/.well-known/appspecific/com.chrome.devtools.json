@@ -1,0 +1,4 @@
+{
+  "name": "local-dev-fallback",
+  "description": "Served for Chrome DevTools probes during local development"
+}
