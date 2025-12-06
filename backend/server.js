@@ -1,24 +1,30 @@
 // backend/server.js
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const apiRoutes = require('./routes/api');
+
+const apiRoutes = require('./routes/api');       // keep if exists
+const agentRoutes = require('./routes/agent');   // offline agent
+const geminiDirect = require('./routes/gemini'); // direct Gemini
+const geminiRag = require('./routes/gemini-rag');// RAG + Gemini
 
 const app = express();
-app.use(cors());
+
+// allow frontend dev origin
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://127.0.0.1:3000']
+}));
 app.use(express.json());
 
-// ===== Development-friendly CSP (relax while developing) =====
-// Move to a stricter policy before production.
+// Dev-friendly CSP (remove or tighten before production)
 app.use((req, res, next) => {
   const csp = [
-    // allow same-origin assets and inline for dev
     "default-src 'self' 'unsafe-inline' data: blob:;",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:;",
     "style-src 'self' 'unsafe-inline' https:;",
     "img-src 'self' data: blob: https:;",
-    // allow devtools/extensions and fetches to localhost
-    "connect-src 'self' http://localhost:5000 http://127.0.0.1:5000 ws://localhost:5000;",
+    "connect-src 'self' http://localhost:5000 http://127.0.0.1:5000 http://localhost:3000 http://127.0.0.1:3000 ws://localhost:5000;",
     "frame-ancestors 'none';",
     "base-uri 'self'"
   ].join(' ');
@@ -26,38 +32,38 @@ app.use((req, res, next) => {
   next();
 });
 
-// ===== Serve static files from /backend/public (optional) =====
-// Create backend/public/index.html or backend/public/.well-known/... to serve files.
+// static public files (if any)
 const publicDir = path.join(__dirname, 'public');
 app.use(express.static(publicDir));
 
-// ===== API routes =====
-app.use('/api', apiRoutes);
+// mount routes
+if (apiRoutes) app.use('/api', apiRoutes);
+app.use('/api/agent', agentRoutes);     // offline RAG agent
+app.use('/api/gemini', geminiDirect);   // direct Gemini (fallback)
+app.use('/api/gemini-rag', geminiRag);  // recommended RAG + Gemini 3 Pro
 
-// ===== Root route (friendly message or serve index.html) =====
+// root & health
 app.get('/', (req, res) => {
-  // If you have an index.html in backend/public, this will serve it automatically
-  // This fallback sends a small HTML response so "Cannot GET /" disappears.
-  res.send(`
-    <html>
-      <head><meta charset="utf-8"><title>PKP Backend</title></head>
-      <body style="font-family: Arial, sans-serif; padding: 24px;">
-        <h2>PKP Backend</h2>
-        <p>API is available at <code>/api</code>. Health: <a href="/health">/health</a></p>
-      </body>
-    </html>
-  `);
+  const indexPath = path.join(publicDir, 'index.html');
+  if (require('fs').existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.send(`
+      <html>
+        <head><meta charset="utf-8"><title>PKP Backend</title></head>
+        <body style="font-family:Arial;padding:20px;">
+          <h2>PKP Backend</h2>
+          <p>APIs: <code>/api/agent</code> (offline), <code>/api/gemini</code> (direct), <code>/api/gemini-rag</code> (RAG+Gemini)</p>
+          <p>Health: <a href="/health">/health</a></p>
+        </body>
+      </html>
+    `);
+  }
 });
-
-// healthcheck
 app.get('/health', (req, res) => res.json({ ok: true, uptime: process.uptime() }));
 
-// catch-all 404 for non-API routes (optional)
-app.use((req, res) => {
-  res.status(404).json({ ok: false, msg: 'Not found' });
-});
+// fallback 404
+app.use((req, res) => res.status(404).json({ ok: false, msg: 'Not found' }));
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Backend running at http://localhost:${PORT}`));
